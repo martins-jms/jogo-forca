@@ -1,5 +1,5 @@
 import os     
-#Importar bibiliotecas
+
 import random
 
 nome = input ('Digite seu nome:') 
@@ -7,14 +7,14 @@ print (f'\nOlá seja bem vindo {nome} ! Vamos jogar?')
 input ('\nPressione enter para iniciar')
 os.system ('cls')
 
-lista_de_palavras = ['maria','antonio','jose','carlos','paulo','drusyla','thomas','pedro','aparecido','flavia']    #definnir lista de palavras
-palavra_selecionada = random.choice(lista_de_palavras).upper()   #escolhe uma das palavras
-tamanho_palavra = len(palavra_selecionada)      #percorrer a palavra (tamanho da palavra)
-palavra_codificada = ['_'] * tamanho_palavra      #codificando a palavra, o mesmo tamanho da original
-quantidade_de_erros = 0      #Contador
+lista_de_palavras = ['maria', 'antonio', 'jose', 'carlos', 'paulo', 'drusyla', 'thomas', 'pedro', 'aparecido', 'flavia', 'matheus']    
+palavra_selecionada = random.choice(lista_de_palavras).upper()  
+tamanho_palavra = len(palavra_selecionada)      
+palavra_codificada = ['_'] * tamanho_palavra      
+quantidade_de_erros = 0      
 
-while '_' in palavra_codificada and quantidade_de_erros <6:     #Condicções para acabar o jogo,
-    print (f'\nSua palavra tem {tamanho_palavra} letras')       #se a palavra ainda tem underline, e se a quantidade de erros e menor que 6
+while '_' in palavra_codificada and quantidade_de_erros <6:     
+    print (f'\nSua palavra tem {tamanho_palavra} letras')       
     print (f'Erros: {quantidade_de_erros} de 6')
     for letra in palavra_codificada:
         print (letra, end = ' ' )
